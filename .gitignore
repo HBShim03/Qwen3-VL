@@ -1,0 +1,3 @@
+# Ignore safetensors model weight files
+*.safetensors
+
