@@ -1,0 +1,108 @@
+  0%|                                             | 0/1473 [00:00<?, ?it/s]/opt/conda/lib/python3.11/site-packages/torch/utils/checkpoint.py:87: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+[2026-02-09 11:18:40,364] [WARNING] [stage3.py:2274:step] 1 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+                                                                           
+{'loss': 0.9307, 'grad_norm': 0.7737228274345398, 'learning_rate': 0.0, 'epoch': 0.0}
+{'loss': 0.9791, 'grad_norm': 1.4005016088485718, 'learning_rate': 4.444444444444445e-06, 'epoch': 0.0}
+{'loss': 0.9082, 'grad_norm': 1.0576261281967163, 'learning_rate': 8.88888888888889e-06, 'epoch': 0.0}
+{'loss': 0.8201, 'grad_norm': 1.0291235446929932, 'learning_rate': 1.3333333333333333e-05, 'epoch': 0.0}
+{'loss': 0.7416, 'grad_norm': 0.7378110885620117, 'learning_rate': 1.777777777777778e-05, 'epoch': 0.0}
+[2026-02-09 11:21:53,420] [WARNING] [stage3.py:2274:step] 1 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+{'loss': 1.0484, 'grad_norm': 1.700520634651184, 'learning_rate': 2.2222222222222223e-05, 'epoch': 0.0}
+{'loss': 1.0263, 'grad_norm': 0.8597660660743713, 'learning_rate': 2.6666666666666667e-05, 'epoch': 0.0}
+{'loss': 0.8485, 'grad_norm': 1.0688109397888184, 'learning_rate': 3.111111111111111e-05, 'epoch': 0.01}
+{'loss': 0.7516, 'grad_norm': 0.5343807339668274, 'learning_rate': 3.555555555555556e-05, 'epoch': 0.01}
+{'loss': 0.7822, 'grad_norm': 0.5288820266723633, 'learning_rate': 4e-05, 'epoch': 0.01}
+{'loss': 0.682, 'grad_norm': 0.5597200393676758, 'learning_rate': 4.4444444444444447e-05, 'epoch': 0.01}
+[2026-02-09 11:25:44,372] [WARNING] [stage3.py:2274:step] 1 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+{'loss': 0.6304, 'grad_norm': 0.4367707371711731, 'learning_rate': 4.888888888888889e-05, 'epoch': 0.01}
+{'loss': 0.7521, 'grad_norm': 0.8194029927253723, 'learning_rate': 5.333333333333333e-05, 'epoch': 0.01}
+{'loss': 0.7177, 'grad_norm': 0.5676530599594116, 'learning_rate': 5.7777777777777776e-05, 'epoch': 0.01}
+{'loss': 0.8051, 'grad_norm': 0.7568213939666748, 'learning_rate': 6.222222222222222e-05, 'epoch': 0.01}
+{'loss': 0.8237, 'grad_norm': 0.44226303696632385, 'learning_rate': 6.666666666666667e-05, 'epoch': 0.01}
+[2026-02-09 11:29:03,223] [WARNING] [stage3.py:2274:step] 2 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+{'loss': 0.6943, 'grad_norm': 0.49621570110321045, 'learning_rate': 7.111111111111112e-05, 'epoch': 0.01}
+[2026-02-09 11:29:41,168] [WARNING] [stage3.py:2274:step] 1 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+{'loss': 0.6853, 'grad_norm': 0.26263806223869324, 'learning_rate': 7.555555555555556e-05, 'epoch': 0.01}
+[2026-02-09 11:30:18,957] [WARNING] [stage3.py:2274:step] 1 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+{'loss': 0.7954, 'grad_norm': 0.4547039270401001, 'learning_rate': 8e-05, 'epoch': 0.01}
+[2026-02-09 11:30:56,883] [WARNING] [stage3.py:2274:step] 1 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+{'loss': 0.7959, 'grad_norm': 0.5040121078491211, 'learning_rate': 8.444444444444444e-05, 'epoch': 0.01}
+[2026-02-09 11:31:37,046] [WARNING] [stage3.py:2274:step] 1 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+{'loss': 0.6891, 'grad_norm': 0.33881527185440063, 'learning_rate': 8.888888888888889e-05, 'epoch': 0.01}
+[2026-02-09 11:32:15,645] [WARNING] [stage3.py:2274:step] 1 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+{'loss': 0.8, 'grad_norm': 0.24110513925552368, 'learning_rate': 9.333333333333334e-05, 'epoch': 0.01}
+{'loss': 0.7014, 'grad_norm': 0.3082810640335083, 'learning_rate': 9.777777777777778e-05, 'epoch': 0.02}
+{'loss': 0.6703, 'grad_norm': 0.24647283554077148, 'learning_rate': 0.00010222222222222222, 'epoch': 0.02}
+{'loss': 0.6408, 'grad_norm': 0.47110268473625183, 'learning_rate': 0.00010666666666666667, 'epoch': 0.02}
+{'loss': 0.6796, 'grad_norm': 0.40191221237182617, 'learning_rate': 0.00011111111111111112, 'epoch': 0.02}
+[2026-02-09 11:35:28,365] [WARNING] [stage3.py:2274:step] 1 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+{'loss': 0.7319, 'grad_norm': 0.46324965357780457, 'learning_rate': 0.00011555555555555555, 'epoch': 0.02}
+{'loss': 0.7613, 'grad_norm': 0.3854735493659973, 'learning_rate': 0.00012, 'epoch': 0.02}
+{'loss': 0.6717, 'grad_norm': 0.3156646490097046, 'learning_rate': 0.00012444444444444444, 'epoch': 0.02}
+{'loss': 0.5248, 'grad_norm': 0.23637157678604126, 'learning_rate': 0.00012888888888888892, 'epoch': 0.02}
+[2026-02-09 11:38:05,112] [WARNING] [stage3.py:2274:step] 1 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+{'loss': 0.757, 'grad_norm': 0.3059924244880676, 'learning_rate': 0.00013333333333333334, 'epoch': 0.02}
+[2026-02-09 11:38:42,014] [WARNING] [stage3.py:2274:step] 1 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+{'loss': 0.6955, 'grad_norm': 0.24765361845493317, 'learning_rate': 0.0001377777777777778, 'epoch': 0.02}
+[2026-02-09 11:39:22,398] [WARNING] [stage3.py:2274:step] 1 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+{'loss': 0.7808, 'grad_norm': 0.379066526889801, 'learning_rate': 0.00014222222222222224, 'epoch': 0.02}
+[2026-02-09 11:40:01,723] [WARNING] [stage3.py:2274:step] 1 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+{'loss': 0.6442, 'grad_norm': 0.3055940568447113, 'learning_rate': 0.00014666666666666666, 'epoch': 0.02}
+{'loss': 0.6454, 'grad_norm': 0.5009756088256836, 'learning_rate': 0.0001511111111111111, 'epoch': 0.02}
+{'loss': 0.7768, 'grad_norm': 0.34786829352378845, 'learning_rate': 0.00015555555555555556, 'epoch': 0.02}
+{'loss': 0.7008, 'grad_norm': 0.37074175477027893, 'learning_rate': 0.00016, 'epoch': 0.03}
+{'loss': 0.7103, 'grad_norm': 0.5998892188072205, 'learning_rate': 0.00016444444444444444, 'epoch': 0.03}
+{'loss': 0.6795, 'grad_norm': 0.43233492970466614, 'learning_rate': 0.00016888888888888889, 'epoch': 0.03}
+{'loss': 0.7382, 'grad_norm': 0.44297972321510315, 'learning_rate': 0.00017333333333333334, 'epoch': 0.03}
+{'loss': 0.6818, 'grad_norm': 0.30539900064468384, 'learning_rate': 0.00017777777777777779, 'epoch': 0.03}
+[2026-02-09 11:45:20,348] [WARNING] [stage3.py:2274:step] 1 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+{'loss': 0.7518, 'grad_norm': 0.39104342460632324, 'learning_rate': 0.00018222222222222224, 'epoch': 0.03}
+[2026-02-09 11:45:58,855] [WARNING] [stage3.py:2274:step] 1 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+{'loss': 0.7135, 'grad_norm': 0.4050082862377167, 'learning_rate': 0.0001866666666666667, 'epoch': 0.03}
+{'loss': 0.779, 'grad_norm': 0.4824390709400177, 'learning_rate': 0.00019111111111111114, 'epoch': 0.03}
+{'loss': 0.6731, 'grad_norm': 0.2514403760433197, 'learning_rate': 0.00019555555555555556, 'epoch': 0.03}
+{'loss': 0.5623, 'grad_norm': 0.3256343603134155, 'learning_rate': 0.0002, 'epoch': 0.03}
+{'loss': 0.7466, 'grad_norm': 0.3073829710483551, 'learning_rate': 0.0001999997580012294, 'epoch': 0.03}
+{'loss': 0.803, 'grad_norm': 0.2801094055175781, 'learning_rate': 0.00019999903200608888, 'epoch': 0.03}
+{'loss': 0.6655, 'grad_norm': 0.3658684492111206, 'learning_rate': 0.00019999782201809226, 'epoch': 0.03}
+{'loss': 0.6172, 'grad_norm': 0.34353896975517273, 'learning_rate': 0.0001999961280430958, 'epoch': 0.03}
+{'loss': 0.5951, 'grad_norm': 0.38734397292137146, 'learning_rate': 0.0001999939500892983, 'epoch': 0.03}
+{'loss': 0.5483, 'grad_norm': 0.3909057676792145, 'learning_rate': 0.00019999128816724108, 'epoch': 0.04}
+{'loss': 0.5292, 'grad_norm': 0.303570032119751, 'learning_rate': 0.0001999881422898077, 'epoch': 0.04}
+{'loss': 0.6154, 'grad_norm': 0.4087302088737488, 'learning_rate': 0.00019998451247222416, 'epoch': 0.04}
+{'loss': 0.6002, 'grad_norm': 0.49659448862075806, 'learning_rate': 0.00019998039873205868, 'epoch': 0.04}
+{'loss': 0.5849, 'grad_norm': 0.2702571153640747, 'learning_rate': 0.00019997580108922165, 'epoch': 0.04}
+[2026-02-09 11:55:09,297] [WARNING] [stage3.py:2274:step] 1 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+{'loss': 0.604, 'grad_norm': 0.4073239266872406, 'learning_rate': 0.0001999707195659656, 'epoch': 0.04}
+{'loss': 0.7051, 'grad_norm': 0.3305204510688782, 'learning_rate': 0.0001999651541868849, 'epoch': 0.04}
+{'loss': 0.7401, 'grad_norm': 0.29800960421562195, 'learning_rate': 0.00019995910497891587, 'epoch': 0.04}
+{'loss': 0.674, 'grad_norm': 0.3068578541278839, 'learning_rate': 0.0001999525719713366, 'epoch': 0.04}
+{'loss': 0.7036, 'grad_norm': 0.2922127842903137, 'learning_rate': 0.00019994555519576662, 'epoch': 0.04}
+{'loss': 0.521, 'grad_norm': 0.4203219711780548, 'learning_rate': 0.00019993805468616693, 'epoch': 0.04}
+{'loss': 0.6044, 'grad_norm': 0.28997862339019775, 'learning_rate': 0.00019993007047883988, 'epoch': 0.04}
+{'loss': 0.5876, 'grad_norm': 0.1948317438364029, 'learning_rate': 0.00019992160261242877, 'epoch': 0.04}
+{'loss': 0.6315, 'grad_norm': 0.3459826707839966, 'learning_rate': 0.0001999126511279179, 'epoch': 0.04}
+{'loss': 0.7251, 'grad_norm': 0.24253880977630615, 'learning_rate': 0.00019990321606863225, 'epoch': 0.04}
+{'loss': 0.7259, 'grad_norm': 0.3002738058567047, 'learning_rate': 0.00019989329748023725, 'epoch': 0.05}
+{'loss': 0.7075, 'grad_norm': 0.4041532874107361, 'learning_rate': 0.00019988289541073863, 'epoch': 0.05}
+{'loss': 0.7687, 'grad_norm': 0.4321959912776947, 'learning_rate': 0.00019987200991048216, 'epoch': 0.05}
+{'loss': 0.7981, 'grad_norm': 0.30676668882369995, 'learning_rate': 0.00019986064103215339, 'epoch': 0.05}
+[2026-02-09 12:04:08,200] [WARNING] [stage3.py:2274:step] 1 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+{'loss': 0.8165, 'grad_norm': 0.3832721412181854, 'learning_rate': 0.00019984878883077737, 'epoch': 0.05}
+{'loss': 0.6185, 'grad_norm': 0.2814233899116516, 'learning_rate': 0.00019983645336371853, 'epoch': 0.05}
+{'loss': 0.6251, 'grad_norm': 0.31463780999183655, 'learning_rate': 0.0001998236346906802, 'epoch': 0.05}
+{'loss': 0.6881, 'grad_norm': 0.4094207286834717, 'learning_rate': 0.00019981033287370443, 'epoch': 0.05}
+{'loss': 0.6603, 'grad_norm': 0.3355962336063385, 'learning_rate': 0.0001997965479771717, 'epoch': 0.05}
+{'loss': 0.5866, 'grad_norm': 0.4190656244754791, 'learning_rate': 0.00019978228006780054, 'epoch': 0.05}
+[2026-02-09 12:08:15,110] [WARNING] [stage3.py:2274:step] 2 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+{'loss': 0.5624, 'grad_norm': 0.21913208067417145, 'learning_rate': 0.00019976752921464734, 'epoch': 0.05}
+{'loss': 0.6893, 'grad_norm': 0.2924532890319824, 'learning_rate': 0.00019975229548910582, 'epoch': 0.05}
+[2026-02-09 12:09:37,116] [WARNING] [stage3.py:2274:step] 4 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+{'loss': 0.6719, 'grad_norm': 0.279249906539917, 'learning_rate': 0.00019973657896490686, 'epoch': 0.05}
+{'loss': 0.7599, 'grad_norm': 0.4599182903766632, 'learning_rate': 0.00019972037971811802, 'epoch': 0.05}
+[2026-02-09 12:10:52,408] [WARNING] [stage3.py:2274:step] 1 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+{'loss': 0.7548, 'grad_norm': 0.29913488030433655, 'learning_rate': 0.0001997036978271433, 'epoch': 0.06}
+[2026-02-09 12:11:33,877] [WARNING] [stage3.py:2274:step] 1 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+{'loss': 0.6499, 'grad_norm': 0.40908652544021606, 'learning_rate': 0.00019968653337272261, 'epoch': 0.06}
+{'loss': 0.5658, 'grad_norm': 0.17889581620693207, 'learning_rate': 0.0001996688864379315, 'epoch': 0.06}

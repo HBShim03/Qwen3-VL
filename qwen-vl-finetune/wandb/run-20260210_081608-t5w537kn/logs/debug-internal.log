@@ -1,0 +1,13 @@
+{"time":"2026-02-10T08:16:09.182048286Z","level":"INFO","msg":"stream: starting","core version":"0.24.0"}
+{"time":"2026-02-10T08:16:09.56223157Z","level":"INFO","msg":"stream: created new stream","id":"t5w537kn"}
+{"time":"2026-02-10T08:16:09.562371529Z","level":"INFO","msg":"handler: started","stream_id":"t5w537kn"}
+{"time":"2026-02-10T08:16:09.562563941Z","level":"INFO","msg":"stream: started","id":"t5w537kn"}
+{"time":"2026-02-10T08:16:09.562595333Z","level":"INFO","msg":"writer: started","stream_id":"t5w537kn"}
+{"time":"2026-02-10T08:16:09.562607717Z","level":"INFO","msg":"sender: started","stream_id":"t5w537kn"}
+{"time":"2026-02-10T18:50:55.347998444Z","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/hanbo0918-kaist/huggingface/t5w537kn/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}
+{"time":"2026-02-10T19:06:58.746841894Z","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/hanbo0918-kaist/huggingface/t5w537kn/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}
+{"time":"2026-02-11T07:28:31.917475454Z","level":"INFO","msg":"stream: closing","id":"t5w537kn"}
+{"time":"2026-02-11T07:28:32.915206784Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-11T07:28:33.179162284Z","level":"INFO","msg":"handler: closed","stream_id":"t5w537kn"}
+{"time":"2026-02-11T07:28:33.179389465Z","level":"INFO","msg":"sender: closed","stream_id":"t5w537kn"}
+{"time":"2026-02-11T07:28:33.179433859Z","level":"INFO","msg":"stream: closed","id":"t5w537kn"}

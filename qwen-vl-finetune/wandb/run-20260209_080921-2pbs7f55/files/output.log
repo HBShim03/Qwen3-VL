@@ -1,0 +1,100 @@
+  0%|                             | 0/1473 [00:00<?, ?it/s]/opt/conda/lib/python3.11/site-packages/torch/utils/checkpoint.py:87: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+                                                                                                     
+{'loss': 0.9307, 'grad_norm': 9.165534973144531, 'learning_rate': 0.0, 'epoch': 0.0}
+{'loss': 0.9791, 'grad_norm': 15.55250358581543, 'learning_rate': 4.444444444444444e-09, 'epoch': 0.0}
+{'loss': 0.9104, 'grad_norm': 13.004075050354004, 'learning_rate': 8.888888888888889e-09, 'epoch': 0.0}
+{'loss': 0.8218, 'grad_norm': 11.901918411254883, 'learning_rate': 1.3333333333333332e-08, 'epoch': 0.0}
+{'loss': 0.7455, 'grad_norm': 8.821429252624512, 'learning_rate': 1.7777777777777777e-08, 'epoch': 0.0}
+{'loss': 1.0664, 'grad_norm': 18.516061782836914, 'learning_rate': 2.222222222222222e-08, 'epoch': 0.0}
+{'loss': 1.0561, 'grad_norm': 13.454543113708496, 'learning_rate': 2.6666666666666664e-08, 'epoch': 0.0}
+{'loss': 0.8929, 'grad_norm': 16.108945846557617, 'learning_rate': 3.111111111111111e-08, 'epoch': 0.01}
+{'loss': 0.7952, 'grad_norm': 10.311774253845215, 'learning_rate': 3.5555555555555554e-08, 'epoch': 0.01}
+{'loss': 0.8433, 'grad_norm': 11.18818187713623, 'learning_rate': 4e-08, 'epoch': 0.01}
+{'loss': 0.7657, 'grad_norm': 13.741121292114258, 'learning_rate': 4.444444444444444e-08, 'epoch': 0.01}
+{'loss': 0.696, 'grad_norm': 9.060920715332031, 'learning_rate': 4.888888888888889e-08, 'epoch': 0.01}
+{'loss': 0.9114, 'grad_norm': 18.161739349365234, 'learning_rate': 5.333333333333333e-08, 'epoch': 0.01}
+{'loss': 0.8976, 'grad_norm': 17.20254135131836, 'learning_rate': 5.777777777777777e-08, 'epoch': 0.01}
+{'loss': 1.0112, 'grad_norm': 16.02596092224121, 'learning_rate': 6.222222222222221e-08, 'epoch': 0.01}
+{'loss': 0.9592, 'grad_norm': 12.411028861999512, 'learning_rate': 6.666666666666665e-08, 'epoch': 0.01}
+[2026-02-09 08:33:43,493] [WARNING] [stage3.py:2274:step] 1 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+{'loss': 0.8309, 'grad_norm': 13.187173843383789, 'learning_rate': 7.111111111111111e-08, 'epoch': 0.01}
+{'loss': 0.8026, 'grad_norm': 11.946063041687012, 'learning_rate': 7.555555555555555e-08, 'epoch': 0.01}
+{'loss': 1.0101, 'grad_norm': 13.544663429260254, 'learning_rate': 8e-08, 'epoch': 0.01}
+{'loss': 0.9521, 'grad_norm': 12.94643783569336, 'learning_rate': 8.444444444444444e-08, 'epoch': 0.01}
+{'loss': 0.863, 'grad_norm': 14.149086952209473, 'learning_rate': 8.888888888888888e-08, 'epoch': 0.01}
+{'loss': 0.956, 'grad_norm': 9.72152328491211, 'learning_rate': 9.333333333333334e-08, 'epoch': 0.01}
+{'loss': 0.8546, 'grad_norm': 10.445332527160645, 'learning_rate': 9.777777777777778e-08, 'epoch': 0.02}
+{'loss': 0.7887, 'grad_norm': 9.029943466186523, 'learning_rate': 1.0222222222222222e-07, 'epoch': 0.02}
+{'loss': 0.7988, 'grad_norm': 15.934511184692383, 'learning_rate': 1.0666666666666666e-07, 'epoch': 0.02}
+{'loss': 0.8691, 'grad_norm': 16.465539932250977, 'learning_rate': 1.1111111111111111e-07, 'epoch': 0.02}
+{'loss': 0.8794, 'grad_norm': 8.394168853759766, 'learning_rate': 1.1555555555555554e-07, 'epoch': 0.02}
+{'loss': 0.9022, 'grad_norm': 11.732093811035156, 'learning_rate': 1.2e-07, 'epoch': 0.02}
+{'loss': 0.8106, 'grad_norm': 12.706259727478027, 'learning_rate': 1.2444444444444443e-07, 'epoch': 0.02}
+{'loss': 0.791, 'grad_norm': 20.681013107299805, 'learning_rate': 1.288888888888889e-07, 'epoch': 0.02}
+{'loss': 0.9282, 'grad_norm': 10.545784950256348, 'learning_rate': 1.333333333333333e-07, 'epoch': 0.02}
+{'loss': 0.8433, 'grad_norm': 13.995383262634277, 'learning_rate': 1.3777777777777778e-07, 'epoch': 0.02}
+{'loss': 1.0449, 'grad_norm': 16.49840545654297, 'learning_rate': 1.4222222222222222e-07, 'epoch': 0.02}
+{'loss': 0.8691, 'grad_norm': 12.95086669921875, 'learning_rate': 1.4666666666666666e-07, 'epoch': 0.02}
+{'loss': 1.0436, 'grad_norm': 21.845104217529297, 'learning_rate': 1.511111111111111e-07, 'epoch': 0.02}
+{'loss': 1.0076, 'grad_norm': 12.473639488220215, 'learning_rate': 1.5555555555555556e-07, 'epoch': 0.02}
+{'loss': 0.94, 'grad_norm': 18.612882614135742, 'learning_rate': 1.6e-07, 'epoch': 0.03}
+  File "/data1/hbshim/Qwen3-VL/qwen-vl-finetune/qwenvl/train/train_qwen.py", line 206, in <module>
+    train()
+  File "/data1/hbshim/Qwen3-VL/qwen-vl-finetune/qwenvl/train/train_qwen.py", line 195, in train
+    trainer.train()
+  File "/opt/conda/lib/python3.11/site-packages/transformers/trainer.py", line 2325, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/transformers/trainer.py", line 2674, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/transformers/trainer.py", line 4071, in training_step
+    self.accelerator.backward(loss, **kwargs)
+  File "/opt/conda/lib/python3.11/site-packages/accelerate/accelerator.py", line 2844, in backward
+    self.deepspeed_engine_wrapped.backward(loss, sync_gradients=self.sync_gradients, **kwargs)
+  File "/opt/conda/lib/python3.11/site-packages/accelerate/utils/deepspeed.py", line 270, in backward
+    self.engine.backward(loss, **kwargs)
+  File "/opt/conda/lib/python3.11/site-packages/deepspeed/utils/nvtx.py", line 20, in wrapped_fn
+    ret_val = func(*args, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/deepspeed/runtime/engine.py", line 2532, in backward
+    loss.backward(**backward_kwargs)
+  File "/opt/conda/lib/python3.11/site-packages/torch/_tensor.py", line 581, in backward
+    torch.autograd.backward(
+  File "/opt/conda/lib/python3.11/site-packages/torch/autograd/__init__.py", line 347, in backward
+    _engine_run_backward(
+  File "/opt/conda/lib/python3.11/site-packages/torch/autograd/graph.py", line 825, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/data1/hbshim/Qwen3-VL/qwen-vl-finetune/qwenvl/train/train_qwen.py", line 206, in <module>
+[rank0]:     train()
+[rank0]:   File "/data1/hbshim/Qwen3-VL/qwen-vl-finetune/qwenvl/train/train_qwen.py", line 195, in train
+[rank0]:     trainer.train()
+[rank0]:   File "/opt/conda/lib/python3.11/site-packages/transformers/trainer.py", line 2325, in train
+[rank0]:     return inner_training_loop(
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/opt/conda/lib/python3.11/site-packages/transformers/trainer.py", line 2674, in _inner_training_loop
+[rank0]:     tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+[rank0]:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/opt/conda/lib/python3.11/site-packages/transformers/trainer.py", line 4071, in training_step
+[rank0]:     self.accelerator.backward(loss, **kwargs)
+[rank0]:   File "/opt/conda/lib/python3.11/site-packages/accelerate/accelerator.py", line 2844, in backward
+[rank0]:     self.deepspeed_engine_wrapped.backward(loss, sync_gradients=self.sync_gradients, **kwargs)
+[rank0]:   File "/opt/conda/lib/python3.11/site-packages/accelerate/utils/deepspeed.py", line 270, in backward
+[rank0]:     self.engine.backward(loss, **kwargs)
+[rank0]:   File "/opt/conda/lib/python3.11/site-packages/deepspeed/utils/nvtx.py", line 20, in wrapped_fn
+[rank0]:     ret_val = func(*args, **kwargs)
+[rank0]:               ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/opt/conda/lib/python3.11/site-packages/deepspeed/runtime/engine.py", line 2532, in backward
+[rank0]:     loss.backward(**backward_kwargs)
+[rank0]:   File "/opt/conda/lib/python3.11/site-packages/torch/_tensor.py", line 581, in backward
+[rank0]:     torch.autograd.backward(
+[rank0]:   File "/opt/conda/lib/python3.11/site-packages/torch/autograd/__init__.py", line 347, in backward
+[rank0]:     _engine_run_backward(
+[rank0]:   File "/opt/conda/lib/python3.11/site-packages/torch/autograd/graph.py", line 825, in _engine_run_backward
+[rank0]:     return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: KeyboardInterrupt

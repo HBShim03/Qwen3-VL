@@ -26,12 +26,42 @@ VIDEOCHATGPT = {
     "data_path": "PATH_TO_VIDEOCHATGPT_DATA",
 }
 
+MERGED_DATASET = {
+    "annotation_path": "/data1/hbshim/finetune/download/100k_FT_data/merged_dataset.json",
+    "data_path": "",
+}
+
+TRAIN_DATASET = {
+    "annotation_path": "/data1/hbshim/finetune/download/100k_FT_data/train.json",
+    "data_path": "",
+}
+
+EVAL_DATASET = {
+    "annotation_path": "/data1/hbshim/finetune/download/100k_FT_data/eval.json",
+    "data_path": "",
+}
+
+AI2D = {
+    "annotation_path": "/data1/hbshim/finetune/download/100k_FT_data/ai2d_transformed_2187.json",
+    "data_path": "",
+}
+
+LLaVA665K = {
+    "annotation_path": "/data1/hbshim/finetune/download/100k_FT_data/llava665k_transformed_88076.json",
+    "data_path": "",
+}
+
 data_dict = {
     "cambrian_737k": CAMBRIAN_737K,
     "cambrian_737k_pack": CAMBRIAN_737K_PACK,
     "mp_doc": MP_DOC,
     "clevr_mc": CLEVR_MC,
     "videochatgpt": VIDEOCHATGPT,
+    "merged_dataset": MERGED_DATASET,
+    "train_dataset": TRAIN_DATASET,
+    "eval_dataset": EVAL_DATASET,
+    "ai2d": AI2D,
+    "llava665k": LLaVA665K,
 }
 
 
@@ -57,7 +87,7 @@ def data_list(dataset_names):
 
 
 if __name__ == "__main__":
-    dataset_names = ["cambrian_737k"]
+    dataset_names = ["train_dataset", "eval_dataset", "ai2d"]  # Example dataset names with sampling rates
     configs = data_list(dataset_names)
     for config in configs:
         print(config)

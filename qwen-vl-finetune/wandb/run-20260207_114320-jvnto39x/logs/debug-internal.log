@@ -1,0 +1,13 @@
+{"time":"2026-02-07T11:43:20.970066683Z","level":"INFO","msg":"stream: starting","core version":"0.24.0"}
+{"time":"2026-02-07T11:43:21.329523922Z","level":"INFO","msg":"stream: created new stream","id":"jvnto39x"}
+{"time":"2026-02-07T11:43:21.329686956Z","level":"INFO","msg":"handler: started","stream_id":"jvnto39x"}
+{"time":"2026-02-07T11:43:21.329942103Z","level":"INFO","msg":"stream: started","id":"jvnto39x"}
+{"time":"2026-02-07T11:43:21.329989237Z","level":"INFO","msg":"sender: started","stream_id":"jvnto39x"}
+{"time":"2026-02-07T11:43:21.329987921Z","level":"INFO","msg":"writer: started","stream_id":"jvnto39x"}
+{"time":"2026-02-07T11:43:27.991592659Z","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":107}
+{"time":"2026-02-07T11:43:27.995108941Z","level":"INFO","msg":"stream: closing","id":"jvnto39x"}
+{"time":"2026-02-07T11:43:28.022332319Z","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":19}
+{"time":"2026-02-07T11:43:28.666411066Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-07T11:43:28.960642373Z","level":"INFO","msg":"handler: closed","stream_id":"jvnto39x"}
+{"time":"2026-02-07T11:43:28.96078618Z","level":"INFO","msg":"sender: closed","stream_id":"jvnto39x"}
+{"time":"2026-02-07T11:43:28.960804833Z","level":"INFO","msg":"stream: closed","id":"jvnto39x"}

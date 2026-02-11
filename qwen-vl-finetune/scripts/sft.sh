@@ -29,7 +29,8 @@ lora_alpha=128
 entry_file=qwenvl/train/train_qwen.py
 
 # Dataset configuration
-datasets=llava665k%10
+datasets=train_dataset
+eval_datasets=eval_dataset
 
 # Output configuration
 run_name="qwen2vl-lora-finetune"
@@ -40,6 +41,7 @@ args="
     --deepspeed ${deepspeed} \
     --model_name_or_path "${llm}" \
     --dataset_use ${datasets} \
+    --eval_dataset_use ${eval_datasets} \
     --data_flatten False \
     --data_packing False \
     --tune_mm_vision False \
@@ -53,16 +55,17 @@ args="
     --output_dir ${output_dir} \
     --num_train_epochs 1 \
     --per_device_train_batch_size ${batch_size} \
-    --per_device_eval_batch_size $((batch_size*2)) \
+    --per_device_eval_batch_size $((batch_size)) \
     --gradient_accumulation_steps ${grad_accum_steps} \
     --max_pixels 50176 \
     --min_pixels 784 \
-    --eval_strategy "no" \
+    --eval_strategy "steps" \
+    --eval_steps 200 \
     --save_strategy "steps" \
-    --save_steps 1000 \
+    --save_steps 500 \
     --save_total_limit 1 \
     --learning_rate ${lr} \
-    --weight_decay 0.05 \
+    --weight_decay 0.05 \   
     --warmup_ratio 0.03 \
     --max_grad_norm 1 \
     --lr_scheduler_type "cosine" \

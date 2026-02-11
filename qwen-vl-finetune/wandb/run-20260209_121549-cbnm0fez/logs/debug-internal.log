@@ -1,0 +1,12 @@
+{"time":"2026-02-09T12:15:50.240641764Z","level":"INFO","msg":"stream: starting","core version":"0.24.0"}
+{"time":"2026-02-09T12:15:50.615654902Z","level":"INFO","msg":"stream: created new stream","id":"cbnm0fez"}
+{"time":"2026-02-09T12:15:50.615824141Z","level":"INFO","msg":"handler: started","stream_id":"cbnm0fez"}
+{"time":"2026-02-09T12:15:50.615981464Z","level":"INFO","msg":"stream: started","id":"cbnm0fez"}
+{"time":"2026-02-09T12:15:50.615994428Z","level":"INFO","msg":"writer: started","stream_id":"cbnm0fez"}
+{"time":"2026-02-09T12:15:50.61604574Z","level":"INFO","msg":"sender: started","stream_id":"cbnm0fez"}
+{"time":"2026-02-09T22:45:36.436074017Z","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/hanbo0918-kaist/huggingface/cbnm0fez/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}
+{"time":"2026-02-10T04:55:40.190648255Z","level":"INFO","msg":"stream: closing","id":"cbnm0fez"}
+{"time":"2026-02-10T04:55:41.151063009Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-10T04:55:41.489241712Z","level":"INFO","msg":"handler: closed","stream_id":"cbnm0fez"}
+{"time":"2026-02-10T04:55:41.489455165Z","level":"INFO","msg":"sender: closed","stream_id":"cbnm0fez"}
+{"time":"2026-02-10T04:55:41.489496319Z","level":"INFO","msg":"stream: closed","id":"cbnm0fez"}
