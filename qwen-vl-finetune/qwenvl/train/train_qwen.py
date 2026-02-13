@@ -122,7 +122,7 @@ def train(attn_implementation="sdpa"):
     os.makedirs(training_args.output_dir, exist_ok=True)
     print(f"Loading model from '{model_args.model_name_or_path}'")
     
-    if model_args.model_name_or_path == "/data1/hbshim/Qwen3-VL/qwen-vl-finetune/merged_model":
+    if model_args.model_name_or_path == "/data1/hbshim/Qwen3-VL/qwen-vl-finetune/output_alignment":
         print("Checkpont detected, loading as Qwen2.5-VL")
         model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
             model_args.model_name_or_path,
