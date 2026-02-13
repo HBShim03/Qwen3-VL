@@ -51,6 +51,16 @@ LLaVA665K = {
     "data_path": "",
 }
 
+ALIGNENT_DATASET_TRAIN = {
+    "annotation_path": "/data1/hbshim/finetune/download/100k_align_data/sharegpt4v_train_filtered_path_fixed.json",
+    "data_path": "",
+}
+
+ALIGNENT_DATASET_EVAL = {
+    "annotation_path": "/data1/hbshim/finetune/download/100k_align_data/sharegpt4v_eval_filtered_path_fixed.json",
+    "data_path": "",
+}
+
 data_dict = {
     "cambrian_737k": CAMBRIAN_737K,
     "cambrian_737k_pack": CAMBRIAN_737K_PACK,
@@ -62,6 +72,8 @@ data_dict = {
     "eval_dataset": EVAL_DATASET,
     "ai2d": AI2D,
     "llava665k": LLaVA665K,
+    "alignment_dataset_train": ALIGNENT_DATASET_TRAIN,
+    "alignment_dataset_eval": ALIGNENT_DATASET_EVAL,
 }
 
 
@@ -87,7 +99,7 @@ def data_list(dataset_names):
 
 
 if __name__ == "__main__":
-    dataset_names = ["train_dataset", "eval_dataset", "ai2d"]  # Example dataset names with sampling rates
+    dataset_names = ["train_dataset", "eval_dataset", "alignment_dataset_train", "alignment_dataset_eval"]  # Example dataset names with sampling rates
     configs = data_list(dataset_names)
     for config in configs:
         print(config)

@@ -21,6 +21,7 @@ import torch
 import transformers
 import sys
 from pathlib import Path
+import pdb
 
 project_root = Path(__file__).parent.parent.parent
 sys.path.append(str(project_root))
@@ -63,7 +64,7 @@ def safe_save_model_for_hf_trainer(trainer: transformers.Trainer, output_dir: st
         del state_dict
         trainer._save(output_dir, state_dict=cpu_state_dict)  # noqa
 
-
+# APPLICABLE - Alignment stage
 def set_model(model_args, model):
     if model_args.tune_mm_vision:
         for n, p in model.visual.named_parameters():
@@ -87,8 +88,28 @@ def set_model(model_args, model):
         for n, p in model.language_model.named_parameters():
             p.requires_grad = False
         model.lm_head.requires_grad = False
+    
+# APPLICABLE
+def print_trainable_parameters(model):
+    """Print a concise list of parameters that have requires_grad=True."""
+    total_params = 0
+    trainable_params = 0
+    names = []
+    for n, p in model.named_parameters():
+        num = p.numel()
+        total_params += num
+        if p.requires_grad:
+            trainable_params += num
+            names.append((n, tuple(p.shape), num))
 
+    # print(f"Trainable params: {trainable_params:,} / {total_params:,} ({trainable_params/total_params:.6f})")
+    # print up to 200 parameter names to avoid flooding logs
+    # for n, shape, num in names[:200]:
+        #print(f"  {n}: shape={shape}, params={num:,}")
+    # if len(names) > 200:
+        # print(f"  ... and {len(names)-200} more trainable parameters")
 
+# APPLICABLE
 def train(attn_implementation="sdpa"):
     global local_rank
 
@@ -99,8 +120,20 @@ def train(attn_implementation="sdpa"):
 
     local_rank = training_args.local_rank
     os.makedirs(training_args.output_dir, exist_ok=True)
+    print(f"Loading model from '{model_args.model_name_or_path}'")
+    
+    if model_args.model_name_or_path == "/data1/hbshim/Qwen3-VL/qwen-vl-finetune/merged_model":
+        print("Checkpont detected, loading as Qwen2.5-VL")
+        model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
+            model_args.model_name_or_path,
+            cache_dir=training_args.cache_dir,
+            attn_implementation=attn_implementation,
+            dtype=(torch.bfloat16 if training_args.bf16 else None),
+        )
+        data_args.model_type = "qwen2.5vl"
 
-    if "qwen3" in model_args.model_name_or_path.lower() and "a" in Path(model_args.model_name_or_path.rstrip("/")).name.lower():
+    # N/A
+    elif "qwen3" in model_args.model_name_or_path.lower() and "a" in Path(model_args.model_name_or_path.rstrip("/")).name.lower():
         model = Qwen3VLMoeForConditionalGeneration.from_pretrained(
             model_args.model_name_or_path,
             cache_dir=training_args.cache_dir,
@@ -133,15 +166,18 @@ def train(attn_implementation="sdpa"):
         )
         data_args.model_type = "qwen2vl"
 
+
     print(f'the initlized model is {model_args.model_name_or_path} the class is {model.__class__.__name__}')
     processor = AutoProcessor.from_pretrained(
         model_args.model_name_or_path,
     )
-
+    
+    # N/A
     if data_args.data_flatten or data_args.data_packing:
         replace_qwen2_vl_attention_class()
     model.config.use_cache = False
 
+    # N/A
     if training_args.gradient_checkpointing:
         if hasattr(model, "enable_input_require_grads"):
             model.enable_input_require_grads()
@@ -160,13 +196,14 @@ def train(attn_implementation="sdpa"):
         use_fast=False,
     )
 
+    # LoRA for instruction tuning
     if training_args.lora_enable:
         from peft import LoraConfig, get_peft_model, TaskType
         print("LoRA enabled")
 
         for p in model.parameters():
             p.requires_grad = False
-
+        
         lora_config = LoraConfig(
             r=training_args.lora_r or 64,
             lora_alpha=training_args.lora_alpha or 128,
@@ -174,11 +211,12 @@ def train(attn_implementation="sdpa"):
             target_modules=["q_proj", "k_proj", "v_proj", "o_proj"],  # Qwen 的 attention 线性层
             bias="none",
             task_type=TaskType.CAUSAL_LM,
+            modules_to_save=["visual.merger"]
         )
         model = get_peft_model(model, lora_config)
+    # Full fine-tuning for alignment stage
     else:
         set_model(model_args, model)
-
         if torch.distributed.get_rank() == 0:
             model.visual.print_trainable_parameters()
             model.model.print_trainable_parameters()

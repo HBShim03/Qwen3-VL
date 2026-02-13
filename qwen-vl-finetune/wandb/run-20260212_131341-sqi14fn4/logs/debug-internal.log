@@ -1,0 +1,11 @@
+{"time":"2026-02-12T13:13:42.039804679Z","level":"INFO","msg":"stream: starting","core version":"0.24.0"}
+{"time":"2026-02-12T13:13:42.42872018Z","level":"INFO","msg":"stream: created new stream","id":"sqi14fn4"}
+{"time":"2026-02-12T13:13:42.428842461Z","level":"INFO","msg":"handler: started","stream_id":"sqi14fn4"}
+{"time":"2026-02-12T13:13:42.429044767Z","level":"INFO","msg":"stream: started","id":"sqi14fn4"}
+{"time":"2026-02-12T13:13:42.429053982Z","level":"INFO","msg":"writer: started","stream_id":"sqi14fn4"}
+{"time":"2026-02-12T13:13:42.429081552Z","level":"INFO","msg":"sender: started","stream_id":"sqi14fn4"}
+{"time":"2026-02-12T13:15:18.411708008Z","level":"INFO","msg":"stream: closing","id":"sqi14fn4"}
+{"time":"2026-02-12T13:15:19.000451228Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-12T13:15:19.796642791Z","level":"INFO","msg":"handler: closed","stream_id":"sqi14fn4"}
+{"time":"2026-02-12T13:15:19.796871257Z","level":"INFO","msg":"sender: closed","stream_id":"sqi14fn4"}
+{"time":"2026-02-12T13:15:19.796911593Z","level":"INFO","msg":"stream: closed","id":"sqi14fn4"}

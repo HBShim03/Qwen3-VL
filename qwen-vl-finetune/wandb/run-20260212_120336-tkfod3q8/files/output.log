@@ -1,0 +1,113 @@
+  0%|                                                                                   | 0/5119 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "/data1/hbshim/Qwen3-VL/qwen-vl-finetune/qwenvl/train/train_qwen.py", line 244, in <module>
+    train()
+  File "/data1/hbshim/Qwen3-VL/qwen-vl-finetune/qwenvl/train/train_qwen.py", line 233, in train
+    trainer.train()
+  File "/opt/conda/lib/python3.11/site-packages/transformers/trainer.py", line 2325, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/transformers/trainer.py", line 2618, in _inner_training_loop
+    batch_samples, num_items_in_batch = self.get_batch_samples(epoch_iterator, num_batches, args.device)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/transformers/trainer.py", line 5654, in get_batch_samples
+    batch_samples.append(next(epoch_iterator))
+                         ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/accelerate/data_loader.py", line 567, in __iter__
+    current_batch = next(dataloader_iter)
+                    ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 701, in __next__
+    data = self._next_data()
+           ^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 1465, in _next_data
+    return self._process_data(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 1491, in _process_data
+    data.reraise()
+  File "/opt/conda/lib/python3.11/site-packages/torch/_utils.py", line 715, in reraise
+    raise exception
+bdb.BdbQuit: Caught BdbQuit in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/opt/conda/lib/python3.11/site-packages/torch/utils/data/_utils/worker.py", line 351, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/torch/utils/data/_utils/fetch.py", line 52, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+            ~~~~~~~~~~~~^^^^^
+  File "/data1/hbshim/Qwen3-VL/qwen-vl-finetune/qwenvl/data/data_processor.py", line 366, in __getitem__
+    raise e
+  File "/data1/hbshim/Qwen3-VL/qwen-vl-finetune/qwenvl/data/data_processor.py", line 363, in __getitem__
+    sample = self.item_fn(sources)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/hbshim/Qwen3-VL/qwen-vl-finetune/qwenvl/data/data_processor.py", line 370, in _get_item
+    data_dict = preprocess_qwen_visual(
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/hbshim/Qwen3-VL/qwen-vl-finetune/qwenvl/data/data_processor.py", line 206, in preprocess_qwen_visual
+    return full_result
+           ^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/bdb.py", line 90, in trace_dispatch
+    return self.dispatch_line(frame)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/bdb.py", line 115, in dispatch_line
+    if self.quitting: raise BdbQuit
+                      ^^^^^^^^^^^^^
+bdb.BdbQuit
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/data1/hbshim/Qwen3-VL/qwen-vl-finetune/qwenvl/train/train_qwen.py", line 244, in <module>
+[rank0]:     train()
+[rank0]:   File "/data1/hbshim/Qwen3-VL/qwen-vl-finetune/qwenvl/train/train_qwen.py", line 233, in train
+[rank0]:     trainer.train()
+[rank0]:   File "/opt/conda/lib/python3.11/site-packages/transformers/trainer.py", line 2325, in train
+[rank0]:     return inner_training_loop(
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/opt/conda/lib/python3.11/site-packages/transformers/trainer.py", line 2618, in _inner_training_loop
+[rank0]:     batch_samples, num_items_in_batch = self.get_batch_samples(epoch_iterator, num_batches, args.device)
+[rank0]:                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/opt/conda/lib/python3.11/site-packages/transformers/trainer.py", line 5654, in get_batch_samples
+[rank0]:     batch_samples.append(next(epoch_iterator))
+[rank0]:                          ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/opt/conda/lib/python3.11/site-packages/accelerate/data_loader.py", line 567, in __iter__
+[rank0]:     current_batch = next(dataloader_iter)
+[rank0]:                     ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/opt/conda/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 701, in __next__
+[rank0]:     data = self._next_data()
+[rank0]:            ^^^^^^^^^^^^^^^^^
+[rank0]:   File "/opt/conda/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 1465, in _next_data
+[rank0]:     return self._process_data(data)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/opt/conda/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 1491, in _process_data
+[rank0]:     data.reraise()
+[rank0]:   File "/opt/conda/lib/python3.11/site-packages/torch/_utils.py", line 715, in reraise
+[rank0]:     raise exception
+[rank0]: bdb.BdbQuit: Caught BdbQuit in DataLoader worker process 0.
+[rank0]: Original Traceback (most recent call last):
+[rank0]:   File "/opt/conda/lib/python3.11/site-packages/torch/utils/data/_utils/worker.py", line 351, in _worker_loop
+[rank0]:     data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/opt/conda/lib/python3.11/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+[rank0]:     data = [self.dataset[idx] for idx in possibly_batched_index]
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/opt/conda/lib/python3.11/site-packages/torch/utils/data/_utils/fetch.py", line 52, in <listcomp>
+[rank0]:     data = [self.dataset[idx] for idx in possibly_batched_index]
+[rank0]:             ~~~~~~~~~~~~^^^^^
+[rank0]:   File "/data1/hbshim/Qwen3-VL/qwen-vl-finetune/qwenvl/data/data_processor.py", line 366, in __getitem__
+[rank0]:     raise e
+[rank0]:   File "/data1/hbshim/Qwen3-VL/qwen-vl-finetune/qwenvl/data/data_processor.py", line 363, in __getitem__
+[rank0]:     sample = self.item_fn(sources)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/data1/hbshim/Qwen3-VL/qwen-vl-finetune/qwenvl/data/data_processor.py", line 370, in _get_item
+[rank0]:     data_dict = preprocess_qwen_visual(
+[rank0]:                 ^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/data1/hbshim/Qwen3-VL/qwen-vl-finetune/qwenvl/data/data_processor.py", line 206, in preprocess_qwen_visual
+[rank0]:     return full_result
+[rank0]:            ^^^^^^^^^^^
+[rank0]:   File "/opt/conda/lib/python3.11/bdb.py", line 90, in trace_dispatch
+[rank0]:     return self.dispatch_line(frame)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/opt/conda/lib/python3.11/bdb.py", line 115, in dispatch_line
+[rank0]:     if self.quitting: raise BdbQuit
+[rank0]:                       ^^^^^^^^^^^^^
+[rank0]: bdb.BdbQuit

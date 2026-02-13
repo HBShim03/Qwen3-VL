@@ -1,0 +1,20 @@
+  1%|▉                                                                      | 18/1280 [09:03<10:32:40, 30.08s/it]
+{'loss': 1.4723, 'grad_norm': 0.1621406078338623, 'learning_rate': 0.0, 'epoch': 0.0}
+{'loss': 1.466, 'grad_norm': 0.1651783138513565, 'learning_rate': 2.564102564102564e-05, 'epoch': 0.0}
+{'loss': 1.4263, 'grad_norm': 0.1752639263868332, 'learning_rate': 5.128205128205128e-05, 'epoch': 0.0}
+{'loss': 1.4459, 'grad_norm': 0.15996265411376953, 'learning_rate': 7.692307692307693e-05, 'epoch': 0.0}
+{'loss': 1.4226, 'grad_norm': 0.19226187467575073, 'learning_rate': 0.00010256410256410256, 'epoch': 0.0}
+{'loss': 1.3183, 'grad_norm': 0.24341560900211334, 'learning_rate': 0.0001282051282051282, 'epoch': 0.0}
+{'loss': 1.2858, 'grad_norm': 0.2700824439525604, 'learning_rate': 0.00015384615384615385, 'epoch': 0.01}
+[2026-02-12 08:57:14,998] [WARNING] [stage3.py:2274:step] 1 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+{'loss': 1.2255, 'grad_norm': 0.25389933586120605, 'learning_rate': 0.0001794871794871795, 'epoch': 0.01}
+{'loss': 1.1533, 'grad_norm': 0.17630243301391602, 'learning_rate': 0.00020512820512820512, 'epoch': 0.01}
+{'loss': 1.1209, 'grad_norm': 0.09821546077728271, 'learning_rate': 0.0002307692307692308, 'epoch': 0.01}
+{'loss': 1.1244, 'grad_norm': 0.09197168052196503, 'learning_rate': 0.0002564102564102564, 'epoch': 0.01}
+{'loss': 1.1153, 'grad_norm': 0.09913314133882523, 'learning_rate': 0.00028205128205128203, 'epoch': 0.01}
+{'loss': 1.1064, 'grad_norm': 0.10283399373292923, 'learning_rate': 0.0003076923076923077, 'epoch': 0.01}
+{'loss': 1.134, 'grad_norm': 0.09376048296689987, 'learning_rate': 0.0003333333333333333, 'epoch': 0.01}
+{'loss': 1.1417, 'grad_norm': 0.08232473582029343, 'learning_rate': 0.000358974358974359, 'epoch': 0.01}
+{'loss': 1.1205, 'grad_norm': 0.07883582264184952, 'learning_rate': 0.00038461538461538467, 'epoch': 0.01}
+{'loss': 1.0921, 'grad_norm': 0.07387642562389374, 'learning_rate': 0.00041025641025641023, 'epoch': 0.01}
+{'loss': 1.1244, 'grad_norm': 0.06287964433431625, 'learning_rate': 0.0004358974358974359, 'epoch': 0.01}

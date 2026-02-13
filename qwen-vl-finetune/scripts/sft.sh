@@ -13,11 +13,11 @@ NPROC_PER_NODE=${NPROC_PER_NODE:-$(nvidia-smi --list-gpus | wc -l)}
 deepspeed=./scripts/zero3.json
 
 # Model configuration
-llm=Qwen/Qwen2.5-VL-3B-Instruct
-
+# llm=/data1/hbshim/Qwen3-VL/qwen-vl-finetune/merged_model
+llm=/data1/hbshim/Qwen3-VL/qwen-vl-finetune/output_alignment
 # Training hyperparameters
 # LoRA usually requires a higher LR than full fine-tuning (e.g., 2e-4 vs 2e-5)
-lr=2e-4
+lr=2e-3
 batch_size=1
 grad_accum_steps=16
 
@@ -33,8 +33,8 @@ datasets=train_dataset
 eval_datasets=eval_dataset
 
 # Output configuration
-run_name="qwen2vl-lora-finetune"
-output_dir=./output_lora
+run_name="qwen2.5vl-lora-instruction-tune"
+output_dir=./output_lora-instruction-tune
 
 # Training arguments
 args="
@@ -45,8 +45,8 @@ args="
     --data_flatten False \
     --data_packing False \
     --tune_mm_vision False \
-    --tune_mm_mlp False \
-    --tune_mm_llm False \
+    --tune_mm_mlp True \
+    --tune_mm_llm True \
     --lora_enable True \
     --lora_r ${lora_r} \
     --lora_alpha ${lora_alpha} \
@@ -57,15 +57,15 @@ args="
     --per_device_train_batch_size ${batch_size} \
     --per_device_eval_batch_size $((batch_size)) \
     --gradient_accumulation_steps ${grad_accum_steps} \
-    --max_pixels 50176 \
+    --max_pixels 25088 \
     --min_pixels 784 \
     --eval_strategy "steps" \
-    --eval_steps 200 \
+    --eval_steps 300 \
     --save_strategy "steps" \
-    --save_steps 500 \
+    --save_steps 300 \
     --save_total_limit 1 \
     --learning_rate ${lr} \
-    --weight_decay 0.05 \   
+    --weight_decay 0.05 \
     --warmup_ratio 0.03 \
     --max_grad_norm 1 \
     --lr_scheduler_type "cosine" \

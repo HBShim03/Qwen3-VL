@@ -1,0 +1,129 @@
+  0%|                                            | 3/1280 [03:46<26:19:47, 74.23s/it]Traceback (most recent call last):
+{'loss': 11.9312, 'grad_norm': 0.0, 'learning_rate': 0.0, 'epoch': 0.0}
+{'loss': 11.9312, 'grad_norm': 0.0, 'learning_rate': 2.564102564102564e-05, 'epoch': 0.0}
+{'loss': 11.9312, 'grad_norm': 0.0, 'learning_rate': 5.128205128205128e-05, 'epoch': 0.0}
+  File "/data1/hbshim/Qwen3-VL/qwen-vl-finetune/qwenvl/train/train_qwen.py", line 270, in <module>
+    trainer.train(resume_from_checkpoint=True)
+    ^^^^^^^
+  File "/data1/hbshim/Qwen3-VL/qwen-vl-finetune/qwenvl/train/train_qwen.py", line 259, in train
+    model.model.print_trainable_parameters()
+    ^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/transformers/trainer.py", line 2325, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/transformers/trainer.py", line 2674, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/transformers/trainer.py", line 4071, in training_step
+    self.accelerator.backward(loss, **kwargs)
+  File "/opt/conda/lib/python3.11/site-packages/accelerate/accelerator.py", line 2844, in backward
+    self.deepspeed_engine_wrapped.backward(loss, sync_gradients=self.sync_gradients, **kwargs)
+  File "/opt/conda/lib/python3.11/site-packages/accelerate/utils/deepspeed.py", line 270, in backward
+    self.engine.backward(loss, **kwargs)
+  File "/opt/conda/lib/python3.11/site-packages/deepspeed/utils/nvtx.py", line 20, in wrapped_fn
+    ret_val = func(*args, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/deepspeed/runtime/engine.py", line 2541, in backward
+    self._backward_epilogue()
+  File "/opt/conda/lib/python3.11/site-packages/deepspeed/runtime/engine.py", line 2382, in _backward_epilogue
+    self.allreduce_gradients()
+  File "/opt/conda/lib/python3.11/site-packages/deepspeed/utils/nvtx.py", line 20, in wrapped_fn
+    ret_val = func(*args, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/deepspeed/runtime/engine.py", line 2332, in allreduce_gradients
+    self.optimizer.overlapping_partition_gradients_reduce_epilogue()
+  File "/opt/conda/lib/python3.11/site-packages/deepspeed/runtime/zero/stage3.py", line 1257, in overlapping_partition_gradients_reduce_epilogue
+    self.independent_gradient_partition_epilogue()
+  File "/opt/conda/lib/python3.11/site-packages/deepspeed/utils/nvtx.py", line 20, in wrapped_fn
+    ret_val = func(*args, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/deepspeed/runtime/zero/stage3.py", line 1230, in independent_gradient_partition_epilogue
+    self.__reduce_and_partition_ipg_grads(comm_dtype)
+  File "/opt/conda/lib/python3.11/site-packages/deepspeed/utils/nvtx.py", line 20, in wrapped_fn
+    ret_val = func(*args, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/deepspeed/runtime/zero/stage3.py", line 1405, in __reduce_and_partition_ipg_grads
+    grad_partitions = self.__avg_scatter_grads(params_in_bucket, communication_data_type)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/deepspeed/utils/nvtx.py", line 20, in wrapped_fn
+    ret_val = func(*args, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/deepspeed/runtime/zero/stage3.py", line 1486, in __avg_scatter_grads
+    grad_partitions_for_rank = reduce_scatter_coalesced(full_grads_for_rank, self.dp_process_group)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/deepspeed/utils/nvtx.py", line 20, in wrapped_fn
+    ret_val = func(*args, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/deepspeed/runtime/comm/coalesced_collectives.py", line 202, in reduce_scatter_coalesced
+    tensor_partition_buffer_for_each_rank: List[Tensor] = torch.chunk(tensor_partition_flat_buffer, world_sz)
+                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/data1/hbshim/Qwen3-VL/qwen-vl-finetune/qwenvl/train/train_qwen.py", line 270, in <module>
+[rank0]:     trainer.train(resume_from_checkpoint=True)
+[rank0]: ^^^^^^^
+[rank0]:   File "/data1/hbshim/Qwen3-VL/qwen-vl-finetune/qwenvl/train/train_qwen.py", line 259, in train
+[rank0]:     model.model.print_trainable_parameters()
+[rank0]: ^^^^^^^^^^^^^^^
+[rank0]:   File "/opt/conda/lib/python3.11/site-packages/transformers/trainer.py", line 2325, in train
+[rank0]:     return inner_training_loop(
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/opt/conda/lib/python3.11/site-packages/transformers/trainer.py", line 2674, in _inner_training_loop
+[rank0]:     tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+[rank0]:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/opt/conda/lib/python3.11/site-packages/transformers/trainer.py", line 4071, in training_step
+[rank0]:     self.accelerator.backward(loss, **kwargs)
+[rank0]:   File "/opt/conda/lib/python3.11/site-packages/accelerate/accelerator.py", line 2844, in backward
+[rank0]:     self.deepspeed_engine_wrapped.backward(loss, sync_gradients=self.sync_gradients, **kwargs)
+[rank0]:   File "/opt/conda/lib/python3.11/site-packages/accelerate/utils/deepspeed.py", line 270, in backward
+[rank0]:     self.engine.backward(loss, **kwargs)
+[rank0]:   File "/opt/conda/lib/python3.11/site-packages/deepspeed/utils/nvtx.py", line 20, in wrapped_fn
+[rank0]:     ret_val = func(*args, **kwargs)
+[rank0]:               ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/opt/conda/lib/python3.11/site-packages/deepspeed/runtime/engine.py", line 2541, in backward
+[rank0]:     self._backward_epilogue()
+[rank0]:   File "/opt/conda/lib/python3.11/site-packages/deepspeed/runtime/engine.py", line 2382, in _backward_epilogue
+[rank0]:     self.allreduce_gradients()
+[rank0]:   File "/opt/conda/lib/python3.11/site-packages/deepspeed/utils/nvtx.py", line 20, in wrapped_fn
+[rank0]:     ret_val = func(*args, **kwargs)
+[rank0]:               ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/opt/conda/lib/python3.11/site-packages/deepspeed/runtime/engine.py", line 2332, in allreduce_gradients
+[rank0]:     self.optimizer.overlapping_partition_gradients_reduce_epilogue()
+[rank0]:   File "/opt/conda/lib/python3.11/site-packages/deepspeed/runtime/zero/stage3.py", line 1257, in overlapping_partition_gradients_reduce_epilogue
+[rank0]:     self.independent_gradient_partition_epilogue()
+[rank0]:   File "/opt/conda/lib/python3.11/site-packages/deepspeed/utils/nvtx.py", line 20, in wrapped_fn
+[rank0]:     ret_val = func(*args, **kwargs)
+[rank0]:               ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/opt/conda/lib/python3.11/site-packages/deepspeed/runtime/zero/stage3.py", line 1230, in independent_gradient_partition_epilogue
+[rank0]:     self.__reduce_and_partition_ipg_grads(comm_dtype)
+[rank0]:   File "/opt/conda/lib/python3.11/site-packages/deepspeed/utils/nvtx.py", line 20, in wrapped_fn
+[rank0]:     ret_val = func(*args, **kwargs)
+[rank0]:               ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/opt/conda/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/opt/conda/lib/python3.11/site-packages/deepspeed/runtime/zero/stage3.py", line 1405, in __reduce_and_partition_ipg_grads
+[rank0]:     grad_partitions = self.__avg_scatter_grads(params_in_bucket, communication_data_type)
+[rank0]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/opt/conda/lib/python3.11/site-packages/deepspeed/utils/nvtx.py", line 20, in wrapped_fn
+[rank0]:     ret_val = func(*args, **kwargs)
+[rank0]:               ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/opt/conda/lib/python3.11/site-packages/deepspeed/runtime/zero/stage3.py", line 1486, in __avg_scatter_grads
+[rank0]:     grad_partitions_for_rank = reduce_scatter_coalesced(full_grads_for_rank, self.dp_process_group)
+[rank0]:                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/opt/conda/lib/python3.11/site-packages/deepspeed/utils/nvtx.py", line 20, in wrapped_fn
+[rank0]:     ret_val = func(*args, **kwargs)
+[rank0]:               ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/opt/conda/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/opt/conda/lib/python3.11/site-packages/deepspeed/runtime/comm/coalesced_collectives.py", line 202, in reduce_scatter_coalesced
+[rank0]:     tensor_partition_buffer_for_each_rank: List[Tensor] = torch.chunk(tensor_partition_flat_buffer, world_sz)
+[rank0]:                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: KeyboardInterrupt

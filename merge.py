@@ -1,5 +1,5 @@
 import torch
-from transformers import AutoModelForVision2Seq, AutoProcessor
+from transformers import Qwen2_5_VLForConditionalGeneration, AutoProcessor
 from peft import PeftModel
 
 # 1. Define paths
@@ -9,8 +9,8 @@ save_path = "/data1/hbshim/Qwen3-VL/qwen-vl-finetune/merged_model"
 
 print(f"Loading base model from {base_model_path}...")
 
-# CHANGE: Use AutoModelForVision2Seq instead of specific class
-base_model = AutoModelForVision2Seq.from_pretrained(
+# CHANGE: Use Qwen2_5_VLForConditionalGeneration instead of AutoModelForVision2Seq
+base_model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
     base_model_path,
     torch_dtype=torch.float16,  
     device_map="auto",

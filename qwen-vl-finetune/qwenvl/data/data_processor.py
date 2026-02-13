@@ -17,6 +17,7 @@ import transformers
 
 from . import data_list
 from .rope2d import get_rope_index_25, get_rope_index_2, get_rope_index_3
+import pdb
 
 IGNORE_INDEX = -100
 IMAGE_TOKEN_INDEX = 151655
@@ -99,6 +100,19 @@ def _build_messages(item: Dict[str, Any], base_path: Path) -> List[Dict[str, Any
         role = "user" if turn["from"] == "human" else "assistant"
         text: str = turn["value"]
 
+        # If the dataset provided a task_type for this item, append its
+        # human-readable instruction to the raw text so it is tokenized inline.
+        task_marker = item.get("task_type")
+        if task_marker:
+            try:
+                instruction = get_instruction_prompt(task_marker, alignment=True)
+                if task_marker == "chat":
+                    instruction = ""
+                
+            except Exception:
+                instruction = None
+            if instruction:
+                text = text + " " + instruction
         if role == "user":
             content = []
             # Split text by <image> or <video> placeholders while keeping delimiters
@@ -123,6 +137,7 @@ def _build_messages(item: Dict[str, Any], base_path: Path) -> List[Dict[str, Any
             messages.append({"role": role, "content": content})
         else:
             # Assistant messages contain only text
+            
             messages.append({"role": role, "content": [{"type": "text", "text": text}]})
 
     # Check for unused media files
@@ -134,23 +149,25 @@ def _build_messages(item: Dict[str, Any], base_path: Path) -> List[Dict[str, Any
         raise ValueError(
             f"{len(video_pool)} video(s) remain unused (not consumed by placeholders)"
         )
-
+    
     return messages
 
-
-def get_system_prompt(task_type: str) -> str:
+# Fix the system prompt
+def get_instruction_prompt(task_type: str, alignment: bool) -> str:
     """
     Determine system prompt based on the task type injected during dataset loading.
     """
-    if task_type == "short_answer":
-        return "Answer the question using a single word or phrase."
-    elif task_type == "multiple_choice":
-        return "Choose the correct option from the given choices."
-    elif task_type == "grounding":
-        return "Provide the bounding box coordinates of the object described."
-    else:
-        # Default / Chat
+    if not alignment: 
+        if task_type == "short_answer":
+            return "Answer the question using a single word or phrase."
+        elif task_type == "multiple_choice":
+            return "Choose the correct option from the given choices."
+        elif task_type == "grounding":
+            return "Provide the bounding box coordinates of the object described."
+
         return "You are a helpful assistant."
+    else:
+        return ""
 
 
 def preprocess_qwen_visual(
@@ -166,13 +183,13 @@ def preprocess_qwen_visual(
 
     # --- MODIFIED: Use injected task_type ---
     task_type = source.get("task_type", "chat")
-    system_prompt = get_system_prompt(task_type)
     
-    messages.insert(0, {"role": "system", "content": [{"type": "text", "text": system_prompt}]})
+    messages.insert(0, {"role": "system", "content": [{"type": "text", "text": "You are a helpful assistant."}]})
 
     full_result = processor.apply_chat_template(
         messages, tokenize=True, return_dict=True, return_tensors="pt"
     )
+   
 
     input_ids = full_result["input_ids"]
     if isinstance(input_ids, list):
@@ -200,6 +217,7 @@ def preprocess_qwen_visual(
 
     full_result["labels"] = labels
     full_result["input_ids"] = input_ids
+
     return full_result
 
 

@@ -1,0 +1,164 @@
+  0%|                                                                                   | 0/1280 [00:00<?, ?it/s]/opt/conda/lib/python3.11/site-packages/torch/utils/checkpoint.py:87: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+  2%|█▌                                                                     | 29/1280 [15:28<11:04:22, 31.86s/it]Traceback (most recent call last):
+{'loss': 1.5038, 'grad_norm': 0.15473654866218567, 'learning_rate': 0.0, 'epoch': 0.0}
+{'loss': 1.4966, 'grad_norm': 0.15716728568077087, 'learning_rate': 2.564102564102564e-05, 'epoch': 0.0}
+{'loss': 1.4607, 'grad_norm': 0.16612905263900757, 'learning_rate': 5.128205128205128e-05, 'epoch': 0.0}
+{'loss': 1.4786, 'grad_norm': 0.14343079924583435, 'learning_rate': 7.692307692307693e-05, 'epoch': 0.0}
+{'loss': 1.4546, 'grad_norm': 0.18212957680225372, 'learning_rate': 0.00010256410256410256, 'epoch': 0.0}
+{'loss': 1.3814, 'grad_norm': 0.2219890058040619, 'learning_rate': 0.0001282051282051282, 'epoch': 0.0}
+{'loss': 1.3403, 'grad_norm': 0.2628322243690491, 'learning_rate': 0.00015384615384615385, 'epoch': 0.01}
+{'loss': 1.2898, 'grad_norm': 0.28733161091804504, 'learning_rate': 0.0001794871794871795, 'epoch': 0.01}
+{'loss': 1.207, 'grad_norm': 0.2198100984096527, 'learning_rate': 0.00020512820512820512, 'epoch': 0.01}
+{'loss': 1.1581, 'grad_norm': 0.11608584970235825, 'learning_rate': 0.0002307692307692308, 'epoch': 0.01}
+{'loss': 1.1652, 'grad_norm': 0.09646967798471451, 'learning_rate': 0.0002564102564102564, 'epoch': 0.01}
+{'loss': 1.1652, 'grad_norm': 0.13080726563930511, 'learning_rate': 0.00028205128205128203, 'epoch': 0.01}
+{'loss': 1.156, 'grad_norm': 0.14205528795719147, 'learning_rate': 0.0003076923076923077, 'epoch': 0.01}
+{'loss': 1.1733, 'grad_norm': 0.10004100948572159, 'learning_rate': 0.0003333333333333333, 'epoch': 0.01}
+{'loss': 1.1758, 'grad_norm': 0.07823317497968674, 'learning_rate': 0.000358974358974359, 'epoch': 0.01}
+{'loss': 1.1573, 'grad_norm': 0.07360247522592545, 'learning_rate': 0.00038461538461538467, 'epoch': 0.01}
+{'loss': 1.1282, 'grad_norm': 0.06809809803962708, 'learning_rate': 0.00041025641025641023, 'epoch': 0.01}
+{'loss': 1.1584, 'grad_norm': 0.06833673268556595, 'learning_rate': 0.0004358974358974359, 'epoch': 0.01}
+[2026-02-12 11:03:32,556] [WARNING] [stage3.py:2274:step] 1 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+{'loss': 1.1385, 'grad_norm': 0.0626077875494957, 'learning_rate': 0.0004615384615384616, 'epoch': 0.01}
+{'loss': 1.1497, 'grad_norm': 0.07689110934734344, 'learning_rate': 0.0004871794871794872, 'epoch': 0.02}
+{'loss': 1.1651, 'grad_norm': 0.061751414090394974, 'learning_rate': 0.0005128205128205128, 'epoch': 0.02}
+{'loss': 1.1896, 'grad_norm': 0.07869132608175278, 'learning_rate': 0.0005384615384615384, 'epoch': 0.02}
+{'loss': 1.1538, 'grad_norm': 0.08072911202907562, 'learning_rate': 0.0005641025641025641, 'epoch': 0.02}
+{'loss': 1.1123, 'grad_norm': 0.1010730192065239, 'learning_rate': 0.0005897435897435898, 'epoch': 0.02}
+{'loss': 1.1605, 'grad_norm': 0.08486698567867279, 'learning_rate': 0.0006153846153846154, 'epoch': 0.02}
+{'loss': 1.1446, 'grad_norm': 0.05835540592670441, 'learning_rate': 0.0006410256410256411, 'epoch': 0.02}
+{'loss': 1.128, 'grad_norm': 0.06791001558303833, 'learning_rate': 0.0006666666666666666, 'epoch': 0.02}
+{'loss': 1.1529, 'grad_norm': 0.07042966037988663, 'learning_rate': 0.0006923076923076923, 'epoch': 0.02}
+{'loss': 1.1382, 'grad_norm': 0.06340643018484116, 'learning_rate': 0.000717948717948718, 'epoch': 0.02}
+  File "/data1/hbshim/Qwen3-VL/qwen-vl-finetune/qwenvl/train/train_qwen.py", line 244, in <module>
+    train()
+  File "/data1/hbshim/Qwen3-VL/qwen-vl-finetune/qwenvl/train/train_qwen.py", line 233, in train
+    trainer.train()
+  File "/opt/conda/lib/python3.11/site-packages/transformers/trainer.py", line 2325, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/transformers/trainer.py", line 2674, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/transformers/trainer.py", line 4020, in training_step
+    loss = self.compute_loss(model, inputs, num_items_in_batch=num_items_in_batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/transformers/trainer.py", line 4110, in compute_loss
+    outputs = model(**inputs)
+              ^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/deepspeed/utils/nvtx.py", line 20, in wrapped_fn
+    ret_val = func(*args, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/deepspeed/runtime/engine.py", line 2265, in forward
+    loss = self.module(*inputs, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1844, in _call_impl
+    return inner()
+           ^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1790, in inner
+    result = forward_call(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/transformers/utils/generic.py", line 918, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/transformers/models/qwen2_5_vl/modeling_qwen2_5_vl.py", line 1476, in forward
+    outputs = self.model(
+              ^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1844, in _call_impl
+    return inner()
+           ^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1790, in inner
+    result = forward_call(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/transformers/models/qwen2_5_vl/modeling_qwen2_5_vl.py", line 1257, in forward
+    image_embeds = self.get_image_features(pixel_values, image_grid_thw)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/transformers/models/qwen2_5_vl/modeling_qwen2_5_vl.py", line 1170, in get_image_features
+    image_embeds = self.visual(pixel_values, grid_thw=image_grid_thw)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1844, in _call_impl
+    return inner()
+           ^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1790, in inner
+    result = forward_call(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/transformers/models/qwen2_5_vl/modeling_qwen2_5_vl.py", line 453, in forward
+    hidden_states = blk(
+                    ^^^^
+  File "/opt/conda/lib/python3.11/site-packages/transformers/modeling_layers.py", line 93, in __call__
+    return self._gradient_checkpointing_func(partial(super().__call__, **kwargs), *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/torch/_compile.py", line 32, in inner
+    return disable_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/torch/_dynamo/eval_frame.py", line 632, in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/torch/utils/checkpoint.py", line 489, in checkpoint
+    return CheckpointFunction.apply(function, preserve, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/torch/autograd/function.py", line 575, in apply
+    return super().apply(*args, **kwargs)  # type: ignore[misc]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/torch/utils/checkpoint.py", line 264, in forward
+    outputs = run_function(*args)
+              ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1844, in _call_impl
+    return inner()
+           ^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1790, in inner
+    result = forward_call(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/transformers/models/qwen2_5_vl/modeling_qwen2_5_vl.py", line 288, in forward
+    hidden_states = hidden_states + self.mlp(self.norm2(hidden_states))
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1844, in _call_impl
+    return inner()
+           ^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1790, in inner
+    result = forward_call(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/transformers/models/qwen2_5_vl/modeling_qwen2_5_vl.py", line 64, in forward
+    return self.down_proj(self.act_fn(self.gate_proj(hidden_state)) * self.up_proj(hidden_state))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1844, in _call_impl
+    return inner()
+           ^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1779, in inner
+    args_result = hook(self, args)
+                  ^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/torch/_dynamo/eval_frame.py", line 632, in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/deepspeed/runtime/zero/parameter_offload.py", line 300, in _pre_forward_module_hook
+    self.pre_sub_module_forward_function(module)
+  File "/opt/conda/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/deepspeed/runtime/zero/parameter_offload.py", line 475, in pre_sub_module_forward_function
+    param_coordinator.fetch_sub_module(sub_module, forward=True)

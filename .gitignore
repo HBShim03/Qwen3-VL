@@ -1,3 +1,6 @@
 # Ignore safetensors model weight files
 *.safetensors
 
+output_alignment/
+
+wrong_output_lora_instruction_tune
